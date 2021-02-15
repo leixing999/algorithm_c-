@@ -1,4 +1,6 @@
+#include<iostream>
 #include "Rank.h"
+using namespace std;
 /// <summary>
 /// 计算数据数组的名次【总的比较次数(n-1)n/2】
 /// 
@@ -56,7 +58,51 @@ void Rank<T>::computeRankSort(T dataArr[], int n, int dataRank[]) {
 
 	delete[]tempDataArr;
 }
+/// <summary>
+/// 名次计算以及排序测试函数
+/// </summary>
+/// <typeparam name="T"></typeparam>
+/// <param name="f"></param>
+template<class T>
+void Rank<T>::computeRankSortResult(T f) {
+	int dataArr[5] = { 4,3,9,3,7 };
+	int dataRank[5] = { 0 };
+	int n = 5;
+	Rank<int>* rank = new Rank<int>();
+	rank->computeRank(dataArr, n, dataRank);
+	for (int i = 0; i < 5; i++) {
+		cout << dataRank[i] << endl;
+	}
 
+	rank->computeRankSort(dataArr, n, dataRank);
+	cout << "----------------" << endl;
+
+	for (int i = 0; i < 5; i++) {
+		cout << dataArr[i] << endl;
+	}
+}
+
+/// <summary>
+/// 原地重排函数
+/// 原地重排函数的定义是：
+/// 从索引i=0开始检索数组dataArr[i],如果数组dataRank[i]=i则i加1，然后按照新的索引
+/// 检查下一个数组元素，如果dataRank[i]不等于i，则索引i和dataRank[i]的数组元素进行交换，
+/// 同时dataArr也进行交换。
+/// </summary>
+/// <typeparam name="T"></typeparam>
+/// <param name="dataArr">待计算的数据数组</param>
+/// <param name="n">数组长度</param>
+/// <param name="dataRank">数据数组的名次结果数组</param>
+template<class T>
+void Rank<T>::rearRangeRank(T dataArr[], int n, int dataRank[]) {
+	for (int i = 0; i < n; i++) {
+		while (dataRank[i] != i) {
+			int r = dataRank[i];
+			swap(dataArr[i], dataArr[r]);
+			swap(dataRank[i], dataRank[r]);
+		}
+	}
+}
 /// <summary>
 /// 默认构造函数
 /// </summary>

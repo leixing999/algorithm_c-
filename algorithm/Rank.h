@@ -28,7 +28,23 @@ public:
 	/// <param name="n">数组长度</param>
 	/// <param name="dataRank">数据数组的名次结果数组</param>
 	 void computeRankSort(T dataArr[], int n, int dataRank[]);
-
+	 /// <summary>
+	 /// 名次计算以及排序测试函数
+	 /// </summary>
+	 /// <param name="n"></param>
+	 void computeRankSortResult(T n);
+	/// <summary>
+	/// 原地重排函数
+	/// 原地重排函数的定义是：
+	/// 从索引i=0开始检索数组dataArr[i],如果数组dataRank[i]=i则i加1，然后按照新的索引
+	/// 检查下一个数组元素，如果dataRank[i]不等于i，则索引i和dataRank[i]的数组元素进行交换，
+	/// 同时dataArr也进行交换。
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="dataArr">待计算的数据数组</param>
+	/// <param name="n">数组长度</param>
+	/// <param name="dataRank">数据数组的名次结果数组</param>
+	 void rearRangeRank(T dataArr[], int n, int dataRank[]);
 
 };
 
