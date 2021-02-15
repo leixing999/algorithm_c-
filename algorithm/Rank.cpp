@@ -57,6 +57,10 @@ void Rank<T>::computeRankSort(T dataArr[], int n, int dataRank[]) {
 	delete[]tempDataArr;
 }
 
+/// <summary>
+/// 默认构造函数
+/// </summary>
+/// <typeparam name="T"></typeparam>
 template<class T>
  Rank<T>::Rank() {
 
