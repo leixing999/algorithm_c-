@@ -140,9 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Rank.h" />
+    <ClInclude Include="SelectionSort.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rank.cpp" />
+    <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
