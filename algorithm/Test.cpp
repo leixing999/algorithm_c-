@@ -3,6 +3,7 @@
 #include"SelectionSort.cpp"
 #include"BubbleBase.cpp"
 #include"InsertSort.cpp"
+#include"BinarySearch.cpp"
 using namespace std;
 int main() {
 	int dataArr[9] = { 12,2,34,4,23,89,7,8,9};
@@ -36,6 +37,17 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		cout << dataArr[i] << endl;
 	}
+
+	BinarySearch<int>* search = new BinarySearch<int>();
+
+	int index = search->search(dataArr, 89, 9);
+
+	cout << "index:" << index;
+
+	delete search;
+
+
+
 
 	delete inseretSort;
 	
