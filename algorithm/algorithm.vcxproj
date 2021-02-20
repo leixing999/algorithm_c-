@@ -140,11 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BubbleBase.h" />
+    <ClInclude Include="InsertSort.h" />
     <ClInclude Include="Rank.h" />
     <ClInclude Include="SelectionSort.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleBase.cpp" />
+    <ClCompile Include="InsertSort.cpp" />
     <ClCompile Include="Rank.cpp" />
     <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="Test.cpp" />

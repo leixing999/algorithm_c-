@@ -2,6 +2,7 @@
 #include"Rank.cpp"
 #include"SelectionSort.cpp"
 #include"BubbleBase.cpp"
+#include"InsertSort.cpp"
 using namespace std;
 int main() {
 	int dataArr[9] = { 12,2,34,4,23,89,7,8,9};
@@ -20,17 +21,23 @@ int main() {
 
 	//sort->optimizeSelectionSort(dataArr, 9);
 
-	BubbleBase<int>* bubbleBase = new BubbleBase<int>();
+	//BubbleBase<int>* bubbleBase = new BubbleBase<int>();
 
 	//bubbleBase->bubbleSort(dataArr, n);
-	bubbleBase->optimizeBubbleSort(dataArr, 9);
+//	bubbleBase->optimizeBubbleSort(dataArr, 9);
+
+	/*for (int i = 0; i < n; i++) {
+		cout << dataArr[i] << endl;
+	}*/
+
+	InsertSort<int>* inseretSort = new InsertSort<int>();
+	inseretSort->insert(dataArr, n);
 
 	for (int i = 0; i < n; i++) {
 		cout << dataArr[i] << endl;
 	}
 
-
-	delete bubbleBase;
+	delete inseretSort;
 	
 	return 0;
 }
